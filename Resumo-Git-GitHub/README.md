@@ -1,30 +1,33 @@
-<h1>
-  💻 Resumo das aulas
-</h1>
-<p>
-Sistema de Controle de Versão
-Controlam a versão de um arquivo ao longo do tempo
+<h1>💻 Resumo das aulas Git GitHub</h1>
 
-Registra o histórico de atualização de um arquivo
-Gerencia quais forma as alterações, a data, autor , etc
-Organização, controle e seguranca
-Tipos de sistema de Controle de Versão
-Dentre os Sistemas de contorle de versão (VCS), temos:
+Sistema de Controle de Versão. <br> 
+Controlam a versão de um arquivo ao longo do tempo. <br> 
+Registra o histórico de atualização de um arquivo. <br>
+Gerencia quais forma as alterações, a data, autor , etc... <br>
+Organização, controle e segurança.<br>
+Tipos de sistema de Controle de Versão; <br>
+Dentre os Sistemas de contorle de versão (VCS), temos:<br>
+<li>
+  <lo>VCS Centralizado (CVCS) </lo>
+</li>
+ <br>
+Um servidor Central com banco de todas as Versões <br>
+ problema dele é que se o servidor ficar fora do ar pode dificultar a colaboração para alteração no projeto,
+da mesma formar que se um arquivo for corropido e tiver uma perca de dados, se não tiver o beckup, pode acabar perdendo o projeto.
+Exemplos: CVS, subversion <br>
+</br>
+<li>
+  <lo>VCS distribuído (DVCS)</lo>
+</li>
+<br>
+O banco de versão é duplicado localmente, os colaboradores do projeto terão uma cópia do projeto.<br>
+Clona o repositório completo, o que inclui o histórico de versões.<br>
+Cada Clone é como um backup<br>
+Possibilita um Fluxo de trabalho fçexivel<br>
+Possibilidade de trabalhar sem conexão a rede<br>
+Exemplos: Git, Mercurial
 
-VCS Centralizado (CVCS)
-ex: CVS, subversion
-Um servidor Central com banco de todas as Versões
-se o servidor ficar fora do ar pode dificultar a colaboração para alteração no projeto
-da mesma formar que se um arquivo for corropido e tiver uma perca de dados, se vc não tiver o beckup, vc pode acabar perdendo todo seu projeto
 
-VCS distribuído (DVCS)
-EX: Git, Mercurial
-o banco de versão é duplicado localmente, os colaboradores do projeto terão uma cópia do projeto 
-Clona o repositório completo, o que inclui o histórico de versões
-Cada Clone é como um backup;
-Possibilita um Fluxo de trabalho fçexivel;
-Possibilidade de trabalhar sem conexão a rede;
-</p>
 <h1>
   O que é Git GitHub?
 </h1>
@@ -33,7 +36,7 @@ Possibilidade de trabalhar sem conexão a rede;
 </p>
 <h2>🔸Git</h2>
 <p>É um Sistema de Controle de versão distribuido
-gratuito open source 
+gratuito open source com
 ramificações (branching) e fusões (merging) eficientes</p>
 <h1>Criando e Clonando Repositórios</h1>
 <table>
@@ -112,7 +115,7 @@ ramificações (branching) e fusões (merging) eficientes</p>
         </tbody>
     </table>
     <h1>Desfazendo Alterações</h1>
-    <table>
+       <table>
         <caption>Comandos Úteis</caption>
         <thead>
             <tr>
@@ -134,7 +137,8 @@ ramificações (branching) e fusões (merging) eficientes</p>
                 <td>Caso queira corrigir ultimo commit feito</td>
             </tr>
            </tbody>
-          <h2>Desfazer commit com 3 tipos de git reset</h2>
+       </table>
+       <h2>Desfazer commit com 3 tipos de git reset</h2>
       <h3>🔸git reset soft</h3>
           <table>
         <thead>
@@ -172,6 +176,7 @@ ramificações (branching) e fusões (merging) eficientes</p>
           </tr>
         </tbody>
   </table>
+          <h3>🔸git reset --hard</h3>
 <table>
         <tbody>
             <tr>
