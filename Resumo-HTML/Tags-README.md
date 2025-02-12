@@ -1,4 +1,5 @@
 h2>tags</h2>
+São comandos utilizados para informar o navegador a estrutura do site.
       <br>
           <i>italico</i>
     italico
@@ -7,6 +8,10 @@ h2>tags</h2>
       <br>
           <strong><i>italico negrito</i></strong>
       <br>
+      O que faz a tag <title>?<br>
+      Localizada dentro de <head>, ela muda o texto que aparece na janela (ou aba) do navegador.<br>
+      O que faz o atributo target="_blank" na tag de link? ,br>
+      Abre o link em outra aba no navegador.<br>
   <h3>tags sem fechamento;</h3>
       <br>
   - Imagem definindo largura com width="largura";    
