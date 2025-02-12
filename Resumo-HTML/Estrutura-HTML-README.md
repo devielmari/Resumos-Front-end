@@ -1,5 +1,5 @@
 <h1>Estrutura HTML</h1>
- - `<html>`:
+<html>:
     <head>
          tudo que o site carrega antes de aparecer para o usuario
    </head>
