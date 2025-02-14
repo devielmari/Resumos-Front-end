@@ -2,20 +2,22 @@
 [![Leia em Inglês](https://img.shields.io/badge/%F0%9F%87%BA%F0%9F%87%B8%20English-gray.svg)](GITCOMMANDS.md)
 
 ##  Índice
-- [ Sistemas de controle versão](#controle-versao)
+- [💻 Sistemas de controle versão](#controle-versao)
 - [⚙️ Configurando o Git](#configurando-o-git)
 - [🗂Criando e Clonando Repositorios](#criando-clonando-repositorios)
 - [📝O que é GiHub](#GitHub)
 - [📝Salvando Alteraçõs no Repositório](#salvando-alteracoes-no-repositório)
-- [🗑Desfazendo Aterações](#desfazendo-alteracoes)
--
+- [↩Desfazendo Aterações](#desfazendo-alteracoes)
+- [❓O que são branchs?](#Branchs)
+- [➕ Criando branchs](Criando-Cranchs)
+- [➕Criando branchs teste](Criando-Cranchs-Teste)
+
 # 💻 Resumo das aulas Git GitHub
 ## O que um Sistema de Controle de Versão faz? 
 -  Controlam a versão de um arquivo ao longo do tempo 
 -  Registra o histórico de atualização de um arquivo. 
 -  Gerencia quais forma as alterações, a data, autor , etc... 
 -  Organização, controle e segurança.
-
 <a id="controle-versao"></a>
 ## Dentre os Sistemas de controle de versão (VCS), temos:
 1. **VCS Centralizado (CVCS)**:
@@ -132,7 +134,40 @@ O "git reset" padão pode ser escrito tambem como apenas"git reset"
 | git reset --hard | Ignora completamente os arquivos que estavam no meu commit anterior e desfaz ele |
 | git log | para confirmar que o arquivo commit foi desfeito |
 
+<a id="Branchs"></a>
+## Trabalhando com Branches
+De maneira simplista, uma Branch (em tradução, "ramo") é uma ramificação do seu projeto.
+É um ponteiro móvel para commit no histórico do repositório;
+Quando você cria uma nova Branch a partir de outra existente a nova 
+se inicia apontando para o mesmo commit da Branch que estava quando foi criada.<br>
+
+<a id= "Criando-Branchs"></a>
+### Criando Branchs
+
 ```jsx
+git status
+git add .
+git commit -m"commit-0"
+echo "commit-1" > commit-1.txt
+git status
+git add .
+echo "commit-2" > commit-2.txt
 
+ ```
+<a id= "Criando-Branchs-Teste"></a>
+### Como fazer uma branch teste;
 
-```
+| Comandos | Descrição |
+| --- | --- |
+| git checkout -b teste | cria e entraa branch teste  |
+| git log |  |
+| echo "commit-3-teste">commit-3-teste.txt  | cria novo arquivo.txt |
+| git commit -m"commit-3-teste |  |
+| git add . |  |
+| git commit -m"commit-3" |  |
+| git checkout main | volta para branch main, assim todos os arquivosda branch teste sera excluido |
+| git branch -v | para ver o ultimo commit de cada branch |
+| it merge nome-da-branch-que-quer-mesclar-a-branch-main | Mescla a branch com a branch main para fazer com que as alterações feitas lá na branch teste serem executadas |
+| git branch | listar as branchs criadas |
+| git branch -d nome-branch-a-excluir | Exclui branch |
+
