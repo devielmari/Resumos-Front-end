@@ -2,8 +2,13 @@
 [![Leia em Inglês](https://img.shields.io/badge/%F0%9F%87%BA%F0%9F%87%B8%20English-gray.svg)](GITCOMMANDS.md)
 
 ##  Índice
-- [Sistemas de controle versão](#controle-versao)
+- [ Sistemas de controle versão](#controle-versao)
 - [⚙️ Configurando o Git](#configurando-o-git)
+- [🗂Criando e Clonando Repositorios](#criando-clonando-repositorios)
+- [📝O que é GiHub](#GitHub)
+- [📝Salvando Alteraçõs no Repositório](#salvando-alteracoes-no-repositório)
+- [🗑Desfazendo Aterações](#desfazendo-alteracoes)
+-
 # 💻 Resumo das aulas Git GitHub
 ## O que um Sistema de Controle de Versão faz? 
 -  Controlam a versão de um arquivo ao longo do tempo 
@@ -54,5 +59,80 @@ Se você precisar especificar o escopo para sua configuração, use as tags abai
   ```bash
   $ git config --system user.email [seu_email_aqui]
   ```
-  
-#O que é Git GitHub?
+  <a id="GitHub"></a>
+## O que é Git GitHub?
+É um Sistema de Controle de versão distribuido, 
+gratuito open source, com
+ramificações (branching) e fusões (merging) eficientes.
+
+<a id="criando-clonando-repositorios"></a>
+## Criando e Clonando Repositórios
+
+Existem formas de obter um repositório git na sua 
+maquina
+
+ 1. **Transformando um diretório local que não esta sob 
+controle de versão num repositório git**:
+
+| Comandos | Descrição |
+| --- | --- |
+|  mkdir nome-da-pasta | Criar pasta |
+| cd nome-da-pasta | entrar na pasta |
+| git init | transformar a pasta em repositório git |
+| ls | listar o que tem dentro da pasta |
+
+2. **Clonando um repositório existente**:
+   
+| Comandos | Descrição |
+| --- | --- |
+| git clone novo-nome-diretório | clonar repositório existente do github |
+| git remote add origin repositório-github | associa um repositório local a um repositório remoto no sistema de controle de versão Git |
+
+ <a id="salvando-alteracoes-no-repositório"></a>
+## Salvando Alterações no Repositório
+| Comandos | Descrição |
+| --- | --- |
+| touch README.md | cria arquivo na linguagem de marcação readme.md |
+| git add README.m | adiciona novo arquivo README.md na area de prepação para commit |
+| git status | mostra o espaço de preparação para dar commits |
+| git commit -m"commit inicial" | grava alterações no repositório com uma mensagem |
+| git log | mostra commits feitos |
+| echo pasta-irrelevante/> .gitignore  | cria arquivo.gitignore para colocar as pastas que não vai aparecer para commitar |
+
+  <a id="desfazendo-alteracoes"></a>
+## Desfazendo Alterações
+
+| Comandos | Descrição |
+| --- | --- |
+| rm -rf .git | desfazer um git init na pasta errada |
+| git restore arquivo1 | voltar para o commit antigo depois de alteração salva em um arquivo1 |
+| git commit --amend -m "correção" | corrigir ultimo commit feito |
+| git reflog | mostra histórico mais detalhado de commits |
+| git restore --staged url-do-arquvo | Tira um arquivo da area de preparação |
+
+## Desfazer commit com 3 tipos de git reset
+
+## 🔸git reset soft
+| Comandos | Descrição |
+| --- | --- |
+| git reset --soft | o arquivo volta dos commits para a area de preparação |
+| git log <br>  git reset --soft numero-do-commit-retornado-do-git-log | mostra commits feitos anteriores e exclui arquivo do commit citado acima |
+
+## 🔸git reset --mixed
+O "git reset" padão pode ser escrito tambem como apenas"git reset"
+| Comandos | Descrição |
+| --- | --- |
+| git status <br> git add .| mostra o arquivo do commit excluido foi removido e o remove com git add . |
+| git log <br> git reset --mixed numero-do-commit-retornado-do-git-log <br> git status <br> git add . | O comando “git reset --mixed” faz o repositório apontar para o commit especificado e reverte o(s) arquivo(s) modificado(s) para unstaged. Assim, após executar “git reset --mixed”, é necessário usar “git add” antes de usar “git commit”. |
+
+## 🔸git reset --hard
+
+| Comandos | Descrição |
+| --- | --- |
+| git reset --hard | Ignora completamente os arquivos que estavam no meu commit anterior e desfaz ele |
+| git log | para confirmar que o arquivo commit foi desfeito |
+
+```jsx
+
+
+```
